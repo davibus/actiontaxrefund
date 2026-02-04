@@ -16,7 +16,7 @@ const services = [
     id: 'individual',
     icon: Calculator,
     title: 'Individual Tax Preparation',
-    description: '[Description placeholder] Professional preparation of personal tax returns for individuals and families. We ensure you claim every deduction and credit you\'re entitled to.',
+    description: 'Professional preparation of personal tax returns for individuals and families. We ensure you claim every deduction and credit you\'re entitled to.',
     features: [
       'Federal and State Returns',
       'E-filing for Faster Refunds',
@@ -30,7 +30,7 @@ const services = [
     id: 'business',
     icon: Building2,
     title: 'Business Tax Services',
-    description: '[Description placeholder] Comprehensive tax services for small businesses, partnerships, and corporations. We help you stay compliant while minimizing your tax burden.',
+    description: 'Comprehensive tax services for small businesses, partnerships, and corporations. We help you stay compliant while minimizing your tax burden.',
     features: [
       'Business Return Preparation',
       'Quarterly Estimated Taxes',
@@ -44,7 +44,7 @@ const services = [
     id: 'planning',
     icon: TrendingUp,
     title: 'Tax Planning & Strategy',
-    description: '[Description placeholder] Year-round tax planning to help you make informed financial decisions and minimize future tax liabilities.',
+    description: 'Year-round tax planning to help you make informed financial decisions and minimize future tax liabilities.',
     features: [
       'Year-Round Tax Consultation',
       'Retirement Planning Support',
@@ -58,7 +58,7 @@ const services = [
     id: 'representation',
     icon: Shield,
     title: 'IRS Representation',
-    description: '[Description placeholder] Expert representation if you\'re facing an IRS audit or need help resolving tax issues. We\'ll advocate on your behalf.',
+    description: 'Expert representation if you\'re facing an IRS audit or need help resolving tax issues. We\'ll advocate on your behalf.',
     features: [
       'Audit Representation',
       'IRS Notice Response',
@@ -72,7 +72,7 @@ const services = [
     id: 'bookkeeping',
     icon: FileText,
     title: 'Bookkeeping Services',
-    description: '[Description placeholder] Keep your financial records organized and accurate with our professional bookkeeping services.',
+    description: 'Keep your financial records organized and accurate with our professional bookkeeping services.',
     features: [
       'Monthly Bookkeeping',
       'Financial Statement Preparation',
@@ -86,7 +86,7 @@ const services = [
     id: 'consulting',
     icon: Users,
     title: 'Tax Consulting',
-    description: '[Description placeholder] Get expert advice on complex tax situations. We provide guidance for major life events and financial decisions.',
+    description: 'Get expert advice on complex tax situations. We provide guidance for major life events and financial decisions.',
     features: [
       'Home Purchase/Sale Guidance',
       'Stock Options Consulting',

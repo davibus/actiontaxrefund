@@ -7,11 +7,25 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-[700px] overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/images/hero_216413689_Preview.jpeg')" }}
-        />
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          {/* Fallback image for initial load and no-JS */}
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/hero_216413689_Preview.jpeg')" }}
+          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/images/hero_216413689_Preview.jpeg"
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src="/videos/hero-background.mp4" type="video/mp4" />
+          </video>
+        </div>
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/40" />
         {/* Decorative elements */}

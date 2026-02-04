@@ -172,7 +172,6 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-navy-900 mb-1">Business Hours</h3>
                     <p className="text-navy-600">
-                      [Hours placeholder]<br />
                       Monday - Friday: 9am - 5pm<br />
                       Saturday: By Appointment<br />
                       Sunday: Closed
@@ -181,13 +180,18 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="aspect-video rounded-2xl bg-gradient-to-br from-navy-100 to-navy-50 border border-navy-200 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <MapPin className="w-12 h-12 text-navy-300 mx-auto mb-4" />
-                  <p className="text-navy-400 text-sm">[Map Placeholder]</p>
-                  <p className="text-navy-300 text-xs mt-2">Embed Google Map here</p>
-                </div>
+              {/* Map */}
+              <div className="aspect-video rounded-2xl overflow-hidden border border-navy-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.8!2d-121.616!3d39.140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e0f1c8c8c8f%3A0x0!2s1060+Northridge+Dr%2C+Yuba+City%2C+CA+95991!5e0!3m2!1sen!2sus!4v1"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Action Tax Refund Location"
+                />
               </div>
             </div>
           </div>

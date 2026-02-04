@@ -7,43 +7,43 @@ import { ChevronDown, ArrowRight, Phone } from 'lucide-react';
 const faqs = [
   {
     question: 'What documents do I need to bring for my tax appointment?',
-    answer: '[Answer placeholder] You\'ll need to bring: W-2s from all employers, 1099 forms for freelance or contract work, last year\'s tax return, Social Security cards for all family members, photo ID, bank account information for direct deposit, and any relevant deduction documentation (mortgage interest, charitable donations, medical expenses, etc.).',
+    answer: 'You\'ll need to bring: W-2s from all employers, 1099 forms for freelance or contract work, last year\'s tax return, Social Security cards for all family members, photo ID, bank account information for direct deposit, and any relevant deduction documentation (mortgage interest, charitable donations, medical expenses, etc.).',
   },
   {
     question: 'How much do your tax preparation services cost?',
-    answer: '[Answer placeholder] Our pricing varies based on the complexity of your return. Simple individual returns start at [price placeholder]. We provide a free estimate before starting any work. Contact us for a personalized quote based on your specific situation.',
+    answer: 'Our pricing varies based on the complexity of your return. We provide a free estimate before starting any work. Contact us for a personalized quote based on your specific situation.',
   },
   {
     question: 'How long does it take to prepare my tax return?',
-    answer: '[Answer placeholder] Most individual returns are completed within 1-2 business days. More complex returns may take longer. We\'ll give you a timeline estimate at your appointment. E-filed returns typically receive refunds within 10-21 days.',
+    answer: 'Most individual returns are completed within 1-2 business days. More complex returns may take longer. We\'ll give you a timeline estimate at your appointment. E-filed returns typically receive refunds within 10-21 days.',
   },
   {
     question: 'Do you offer year-round tax services?',
-    answer: '[Answer placeholder] Yes! While tax season is our busiest time, we provide year-round services including tax planning, quarterly estimated payments, IRS representation, bookkeeping, and tax consulting. We\'re here to help whenever you need us.',
+    answer: 'Yes! While tax season is our busiest time, we provide year-round services including tax planning, quarterly estimated payments, IRS representation, bookkeeping, and tax consulting. We\'re here to help whenever you need us.',
   },
   {
     question: 'Can you help with back taxes or unfiled returns?',
-    answer: '[Answer placeholder] Absolutely. We can help you file prior year returns and work with the IRS to resolve any outstanding issues. We\'ll help you understand your options and create a plan to get you back on track.',
+    answer: 'Absolutely. We can help you file prior year returns and work with the IRS to resolve any outstanding issues. We\'ll help you understand your options and create a plan to get you back on track.',
   },
   {
     question: 'What if I receive an IRS notice or audit letter?',
-    answer: '[Answer placeholder] Don\'t panic! Contact us immediately. We offer IRS representation services and will help you respond appropriately. We\'ll review the notice, explain what it means, and represent you in communications with the IRS.',
+    answer: 'Don\'t panic! Contact us immediately. We offer IRS representation services and will help you respond appropriately. We\'ll review the notice, explain what it means, and represent you in communications with the IRS.',
   },
   {
     question: 'Do you prepare business tax returns?',
-    answer: '[Answer placeholder] Yes, we prepare returns for sole proprietors, partnerships, LLCs, and S-corporations. We also offer bookkeeping services and quarterly tax planning to help keep your business finances organized year-round.',
+    answer: 'Yes, we prepare returns for sole proprietors, partnerships, LLCs, and S-corporations. We also offer bookkeeping services and quarterly tax planning to help keep your business finances organized year-round.',
   },
   {
     question: 'How do I schedule an appointment?',
-    answer: '[Answer placeholder] You can schedule an appointment by calling us at (530) 701-6538 or using our online scheduling form. During tax season, we recommend booking early as appointments fill up quickly.',
+    answer: 'You can schedule an appointment by calling us at (530) 701-6538 or using our online scheduling form. During tax season, we recommend booking early as appointments fill up quickly.',
   },
   {
     question: 'What payment methods do you accept?',
-    answer: '[Answer placeholder] We accept cash, checks, and major credit cards. For your convenience, we also offer the option to deduct our fee from your refund (refund transfer).',
+    answer: 'We accept cash, checks, and major credit cards. For your convenience, we also offer the option to deduct our fee from your refund (refund transfer).',
   },
   {
     question: 'Is my information kept confidential?',
-    answer: '[Answer placeholder] Absolutely. We take your privacy seriously and follow strict confidentiality protocols. Your personal and financial information is never shared with third parties and is secured using industry-standard practices.',
+    answer: 'Absolutely. We take your privacy seriously and follow strict confidentiality protocols. Your personal and financial information is never shared with third parties and is secured using industry-standard practices.',
   },
 ];
 

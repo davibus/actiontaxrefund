@@ -64,18 +64,18 @@ export default function SchedulePage() {
                 Book Your Appointment
               </h2>
 
-              {/* Placeholder for scheduling widget */}
+              {/* Call to Schedule */}
               <div className="bg-gradient-to-br from-navy-50 to-white rounded-2xl border border-navy-200 p-8">
-                <div className="text-center py-12">
+                <div className="text-center py-8">
                   <div className="w-20 h-20 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
                     <Calendar className="w-10 h-10 text-gold-600" />
                   </div>
                   <h3 className="font-display text-xl font-semibold text-navy-900 mb-3">
-                    [Scheduling Widget Placeholder]
+                    Ready to Book?
                   </h3>
                   <p className="text-navy-500 mb-6">
-                    Integrate your preferred scheduling tool here<br />
-                    (Calendly, Acuity, Square Appointments, etc.)
+                    Call us to schedule your appointment at a time<br />
+                    that works best for you.
                   </p>
                   <div className="space-y-3">
                     <a
@@ -86,7 +86,7 @@ export default function SchedulePage() {
                       Call to Schedule: (530) 701-6538
                     </a>
                     <p className="text-navy-400 text-sm">
-                      Or call us directly to book your appointment
+                      We&apos;ll find the perfect time for your visit
                     </p>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function SchedulePage() {
               Business Hours
             </h2>
             <p className="text-navy-600">
-              [Hours placeholder - Update with actual hours]
+              We&apos;re here to help during the following hours
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">

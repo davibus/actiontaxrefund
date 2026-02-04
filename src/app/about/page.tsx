@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Award, Users, Clock, Target, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const values = [
@@ -45,15 +46,19 @@ export default function AboutPage() {
       <section className="py-20 bg-white paper-texture">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-navy-100 to-navy-50 border border-navy-200 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-32 h-32 rounded-full bg-gold-100 flex items-center justify-center mx-auto mb-6">
-                  <span className="font-display text-5xl text-gold-600 font-bold">MC</span>
-                </div>
-                <p className="text-navy-400 text-sm">[Professional Photo Placeholder]</p>
-                <p className="text-navy-500 font-display text-xl font-semibold mt-4">Mark D. Call</p>
-                <p className="text-navy-400 text-sm">Owner & Tax Professional</p>
+            {/* Photo */}
+            <div className="relative">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/mark-call.jpg"
+                  alt="Mark D. Call - Owner of Action Tax Refund"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-navy-100">
+                <p className="font-display text-xl font-semibold text-navy-900">Mark D. Call</p>
+                <p className="text-navy-500 text-sm">Owner & Tax Professional</p>
               </div>
             </div>
 
@@ -64,17 +69,17 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-navy-600 text-lg leading-relaxed">
                 <p>
-                  [Bio placeholder] Welcome to Action Tax Refund! I&apos;m Mark D. Call,
+                  Welcome to Action Tax Refund! I&apos;m Mark D. Call,
                   and I&apos;ve been helping individuals and businesses with their tax needs
-                  for over a decade.
+                  for over 35 years.
                 </p>
                 <p>
-                  [Bio placeholder] Based in Yuba City, California, I founded Action Tax Refund
+                  Based in Yuba City, California, I founded Action Tax Refund
                   with a simple goal: to provide professional, accurate tax services with
                   the personal touch that larger firms simply can&apos;t offer.
                 </p>
                 <p>
-                  [Bio placeholder] I believe that every client deserves individual attention
+                  I believe that every client deserves individual attention
                   and expert guidance. Whether you&apos;re filing a simple return or navigating
                   complex tax situations, I&apos;m here to help you every step of the way.
                 </p>
@@ -87,15 +92,15 @@ export default function AboutPage() {
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2 text-navy-700">
                     <CheckCircle2 className="w-5 h-5 text-sage-500" />
-                    [Certification placeholder]
+                    IRS Registered Tax Preparer
                   </li>
                   <li className="flex items-center gap-2 text-navy-700">
                     <CheckCircle2 className="w-5 h-5 text-sage-500" />
-                    [Certification placeholder]
+                    35+ Years of Tax Preparation Experience
                   </li>
                   <li className="flex items-center gap-2 text-navy-700">
                     <CheckCircle2 className="w-5 h-5 text-sage-500" />
-                    [Certification placeholder]
+                    Annual Continuing Education Certified
                   </li>
                 </ul>
               </div>
@@ -147,7 +152,7 @@ export default function AboutPage() {
             Our Mission
           </h2>
           <p className="text-white/90 text-xl leading-relaxed mb-8">
-            &ldquo;[Mission statement placeholder] To provide accurate, reliable, and personalized
+            &ldquo;To provide accurate, reliable, and personalized
             tax services that help our clients achieve their financial goals while building
             lasting relationships based on trust and integrity.&rdquo;
           </p>
