@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X, Phone } from 'lucide-react';
 
@@ -36,18 +37,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg group-hover:shadow-gold-500/30 transition-shadow">
-              <span className="font-display text-navy-900 text-xl font-bold">A</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display text-white text-lg font-semibold tracking-tight">
-                Action Tax Refund
-              </span>
-              <span className="text-white/50 text-xs tracking-wide">
-                Professional Tax Services
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/action-tax-refund-logo.png"
+              alt="Action Tax Refund"
+              width={200}
+              height={60}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

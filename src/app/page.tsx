@@ -1,68 +1,110 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Calculator, Truck, HeadphonesIcon, Star, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-navy-900 overflow-hidden">
+      <section className="relative min-h-[600px] lg:min-h-[700px] overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/images/hero_216413689_Preview.jpeg')" }}
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/40" />
         {/* Decorative elements */}
-        <div className="absolute inset-0 geometric-accent opacity-30" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-sage-500/10 to-transparent" />
+        <div className="absolute inset-0 geometric-accent opacity-20" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium mb-6">
-                <Star className="w-4 h-4 fill-current" />
-                Trusted Tax Professionals
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex items-center min-h-[600px] lg:min-h-[700px]">
+          <div className="max-w-2xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium mb-6 backdrop-blur-sm">
+              <Star className="w-4 h-4 fill-current" />
+              Trusted Tax Professionals
+            </div>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+              Expert Tax Services for{' '}
+              <span className="text-gold-400">Maximum Returns</span>
+            </h1>
+            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
+              At Action Tax Refund, we specialize in providing top-notch tax preparation
+              and professional services to meet all your financial needs. Get the refund
+              you deserve with personalized attention.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/schedule"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
+              >
+                Schedule Appointment
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <a
+                href="tel:530-701-6538"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
+              >
+                <Phone className="w-5 h-5" />
+                (530) 701-6538
+              </a>
+            </div>
+            {/* Floating accent */}
+            <div className="mt-12 inline-flex items-center gap-6">
+              <div className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
+                <p className="font-display text-3xl font-bold text-white">35+</p>
+                <p className="text-sage-300 text-sm">Years Experience</p>
               </div>
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                Expert Tax Services for{' '}
-                <span className="text-gold-400">Maximum Returns</span>
-              </h1>
-              <p className="text-xl text-white/70 leading-relaxed mb-8 max-w-xl">
-                At Action Tax Refund, we specialize in providing top-notch tax preparation
-                and professional services to meet all your financial needs. Get the refund
-                you deserve with personalized attention.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/schedule"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
-                >
-                  Schedule Appointment
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <a
-                  href="tel:530-701-6538"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/5 text-white border border-white/10 rounded-xl font-semibold hover:bg-white/10 transition-all"
-                >
-                  <Phone className="w-5 h-5" />
-                  (530) 701-6538
-                </a>
+              <div className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
+                <p className="font-display text-3xl font-bold text-white">4000+</p>
+                <p className="text-sage-300 text-sm">Satisfied Clients</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            {/* Hero Image Placeholder */}
-            <div className="relative hidden lg:block">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-6">
-                    <Calculator className="w-16 h-16 text-gold-400" />
-                  </div>
-                  <p className="text-white/40 text-sm">[Hero Image Placeholder]</p>
-                  <p className="text-white/30 text-xs mt-2">Replace with professional photo</p>
-                </div>
+      {/* About Preview */}
+      <section className="py-20 bg-gradient-to-b from-navy-900 to-navy-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
+                A Family-Owned Business <span className="text-gold-400">You Can Trust</span>
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed mb-6">
+                Action Tax Refund was established with a simple mission:
+                to provide accurate, reliable tax services with the personal touch that
+                larger firms can&apos;t offer. Led by Mark D. Call, our team brings over a
+                decade of experience to every return we prepare.
+              </p>
+              <p className="text-white/70 text-lg leading-relaxed mb-8">
+                We take pride in our commitment to customer satisfaction. Every client
+                receives personalized attention and expert guidance to ensure they get
+                the maximum refund they&apos;re entitled to.
+              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors"
+              >
+                Learn More About Us
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+
+            {/* About Image */}
+            <div className="relative">
+              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
+                <Image
+                  src="/images/mark-call.jpg"
+                  alt="Mark D. Call - Owner of Action Tax Refund"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              {/* Floating accent */}
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 rounded-xl bg-sage-500/20 backdrop-blur-sm border border-sage-500/20 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="font-display text-4xl font-bold text-white">10+</p>
-                  <p className="text-sage-400 text-sm">Years Experience</p>
-                </div>
-              </div>
+              {/* Decorative accent */}
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl bg-gold-500/20 -z-10" />
+              <div className="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-sage-500/20 -z-10" />
             </div>
           </div>
         </div>
@@ -140,7 +182,7 @@ export default function Home() {
             </div>
             <a
               href="tel:530-701-6538"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-sage-700 rounded-xl font-bold text-lg hover:bg-gold-100 transition-all shadow-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-bold text-lg hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20"
             >
               <Phone className="w-6 h-6" />
               (530) 701-6538
@@ -153,15 +195,14 @@ export default function Home() {
       <section className="py-20 bg-white paper-texture">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Image Placeholder */}
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-navy-100 to-navy-50 border border-navy-200 flex items-center justify-center order-2 lg:order-1">
-              <div className="text-center p-8">
-                <div className="w-24 h-24 rounded-full bg-navy-200/50 flex items-center justify-center mx-auto mb-4">
-                  <Calculator className="w-12 h-12 text-navy-400" />
-                </div>
-                <p className="text-navy-400 text-sm">[Services Image Placeholder]</p>
-                <p className="text-navy-300 text-xs mt-2">Replace with office or team photo</p>
-              </div>
+            {/* Services Image */}
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/images/money-back.png"
+                alt="Get your maximum tax refund"
+                fill
+                className="object-contain"
+              />
             </div>
 
             <div className="order-1 lg:order-2">
@@ -169,7 +210,7 @@ export default function Home() {
                 Check Out Our Exclusive Services
               </h2>
               <p className="text-navy-600 text-lg leading-relaxed mb-8">
-                With more than 10 years of experience in tax preparation and financial
+                With 35+ years of experience in tax preparation and financial
                 services, we bring expertise and dedication to every client. Our
                 comprehensive services are designed to meet all your tax needs.
               </p>
@@ -198,48 +239,6 @@ export default function Home() {
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview */}
-      <section className="py-20 bg-gradient-to-b from-navy-900 to-navy-950">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                A Family-Owned Business <span className="text-gold-400">You Can Trust</span>
-              </h2>
-              <p className="text-white/70 text-lg leading-relaxed mb-6">
-                [About placeholder] Action Tax Refund was established with a simple mission:
-                to provide accurate, reliable tax services with the personal touch that
-                larger firms can&apos;t offer. Led by Mark D. Call, our team brings over a
-                decade of experience to every return we prepare.
-              </p>
-              <p className="text-white/70 text-lg leading-relaxed mb-8">
-                We take pride in our commitment to customer satisfaction. Every client
-                receives personalized attention and expert guidance to ensure they get
-                the maximum refund they&apos;re entitled to.
-              </p>
-              <Link
-                href="/about"
-                className="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors"
-              >
-                Learn More About Us
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-
-            {/* About Image Placeholder */}
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-white/10 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="w-24 h-24 rounded-full bg-gold-500/20 flex items-center justify-center mx-auto mb-4">
-                  <span className="font-display text-4xl text-gold-400 font-bold">MC</span>
-                </div>
-                <p className="text-white/40 text-sm">[About Image Placeholder]</p>
-                <p className="text-white/30 text-xs mt-2">Photo of Mark D. Call</p>
-              </div>
             </div>
           </div>
         </div>
