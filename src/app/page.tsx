@@ -7,23 +7,23 @@ export default function Home() {
     <>
       {/* Hero Section */}
       <section className="relative min-h-[600px] lg:min-h-[700px] overflow-hidden">
-        {/* Background Video */}
+        {/* Background Video - Optimized: 53MB → 1.6MB */}
         <div className="absolute inset-0">
           {/* Fallback image for initial load and no-JS */}
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: "url('/images/hero_216413689_Preview.jpeg')" }}
+            style={{ backgroundImage: "url('/images/hero-video-poster.webp')" }}
           />
           <video
             autoPlay
             muted
             loop
             playsInline
-            preload="metadata"
-            poster="/images/hero_216413689_Preview.jpeg"
+            preload="none"
+            poster="/images/hero-video-poster.webp"
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/hero-background.mp4" type="video/mp4" />
+            <source src="/videos/hero-video-optimized.mp4" type="video/mp4" />
           </video>
         </div>
         {/* Dark overlay for text readability */}
@@ -39,14 +39,40 @@ export default function Home() {
               Trusted Tax Professionals
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Expert Tax Services for{' '}
+              Expert Tax Services{' '}
               <span className="text-gold-400">Maximum Returns</span>
             </h1>
-            <p className="text-xl text-white/80 leading-relaxed mb-8 max-w-xl">
-              At Action Tax Refund, we specialize in providing top-notch tax preparation
-              and professional services to meet all your financial needs. Get the refund
-              you deserve with personalized attention.
+            <p className="text-2xl sm:text-3xl text-white/80 leading-relaxed mb-8 max-w-xl">
+              Claim Prepared.<br />
+              Forms Filed.<br />
+              Refunds Maximized.
             </p>
+            {/* Prominent Phone Number */}
+            <a
+              href="tel:530-701-6538"
+              className="group relative inline-flex items-center gap-4 mb-8"
+            >
+              {/* Animated pulse ring */}
+              <span className="absolute inset-2 rounded-2xl bg-gold-500/10 animate-ping" style={{ animationDuration: '3s' }} />
+              <span className="absolute inset-1 rounded-2xl bg-gold-500/5 animate-pulse" />
+
+              <div className="relative flex items-center gap-4 px-6 py-4 rounded-2xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 shadow-2xl shadow-gold-500/40 border-2 border-gold-300/50">
+                {/* Phone icon with ring animation */}
+                <div className="relative">
+                  <div className="absolute inset-0 bg-navy-900/20 rounded-full blur-md" />
+                  <div className="relative w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Phone className="w-7 h-7 text-gold-400 group-hover:animate-bounce" />
+                  </div>
+                </div>
+
+                {/* Phone number text */}
+                <div className="flex flex-col">
+                  <span className="text-navy-900/70 text-sm font-semibold uppercase tracking-wider">Call Now - Free Consultation</span>
+                  <span className="font-display text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">(530) 701-6538</span>
+                </div>
+              </div>
+            </a>
+
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/schedule"
@@ -55,13 +81,13 @@ export default function Home() {
                 Schedule Appointment
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a
-                href="tel:530-701-6538"
+              <Link
+                href="/services"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
               >
-                <Phone className="w-5 h-5" />
-                (530) 701-6538
-              </a>
+                Our Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
             {/* Floating accent */}
             <div className="mt-12 inline-flex items-center gap-6">
@@ -74,6 +100,19 @@ export default function Home() {
                 <p className="text-sage-300 text-sm">Satisfied Clients</p>
               </div>
             </div>
+            {/* Free Consultation Boxes */}
+            <div className="mt-6 flex flex-wrap gap-4">
+              <div className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-sage-600 to-sage-700 shadow-lg shadow-sage-900/20 border border-white/10 backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
+                <p className="font-display text-xl sm:text-2xl font-bold text-white tracking-wide">
+                  Free Consultation
+                </p>
+              </div>
+              <div className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-sage-600 to-sage-700 shadow-lg shadow-sage-900/20 border border-white/10 backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
+                <p className="font-display text-xl sm:text-2xl font-bold text-white tracking-wide">
+                  Free Prior Year Review
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -84,16 +123,15 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-                A Family-Owned Business <span className="text-gold-400">You Can Trust</span>
+                One on One <span className="text-gold-400">Personal Service</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed mb-6">
                 Action Tax Refund was established with a simple mission:
                 to provide accurate, reliable tax services with the personal touch that
-                larger firms can&apos;t offer. Led by Mark D. Call, our team brings over a
-                decade of experience to every return we prepare.
+                larger firms can&apos;t offer. I&apos;m Mark D. Call, EA, and I bring over 4 decades of experience to every return I prepare.
               </p>
               <p className="text-white/70 text-lg leading-relaxed mb-8">
-                We take pride in our commitment to customer satisfaction. Every client
+                I take pride in my commitment to customer satisfaction. Every client
                 receives personalized attention and expert guidance to ensure they get
                 the maximum refund they&apos;re entitled to.
               </p>
@@ -101,7 +139,7 @@ export default function Home() {
                 href="/about"
                 className="inline-flex items-center gap-2 text-gold-400 font-semibold hover:text-gold-300 transition-colors"
               >
-                Learn More About Us
+                Learn More About Me
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -110,10 +148,12 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                 <Image
-                  src="/images/mark-call.jpg"
-                  alt="Mark D. Call - Owner of Action Tax Refund"
+                  src="/images/mark-call.webp"
+                  alt="Mark D. Call, EA - Owner of Action Tax Refund"
                   fill
                   className="object-cover"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               {/* Decorative accent */}
@@ -132,7 +172,7 @@ export default function Home() {
               Why Choose Action Tax Refund?
             </h2>
             <p className="text-navy-600 text-lg max-w-2xl mx-auto">
-              We combine expertise with personalized service to ensure you get the best results.
+              I combine expertise with personalized service to ensure you get the best results.
             </p>
           </div>
 
@@ -146,7 +186,7 @@ export default function Home() {
                 Tax Experts
               </h3>
               <p className="text-navy-600 leading-relaxed">
-                Our team of certified tax professionals brings years of experience
+                As a certified tax professional, I bring years of experience
                 to maximize your refund while ensuring full compliance.
               </p>
             </div>
@@ -182,24 +222,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Banner */}
-      <section className="bg-gradient-to-r from-sage-600 to-sage-700 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="text-center md:text-left">
-              <h2 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
-                Ready to Get Your Maximum Refund?
-              </h2>
-              <p className="text-white/80">
-                Call us today to book an appointment with Mark D. Call
-              </p>
-            </div>
+      {/* CTA Banner - Bold Phone Focus */}
+      <section className="relative bg-gradient-to-r from-navy-900 via-navy-800 to-navy-900 py-16 overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-sage-500 rounded-full blur-3xl" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+              Ready to Get Your <span className="text-gold-400">Maximum Refund?</span>
+            </h2>
+            <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+              Talk to Mark D. Call, EA today and discover how much you could be getting back
+            </p>
+
+            {/* Large prominent phone CTA */}
             <a
               href="tel:530-701-6538"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-bold text-lg hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20"
+              className="group relative inline-flex flex-col items-center"
             >
-              <Phone className="w-6 h-6" />
-              (530) 701-6538
+              {/* Outer glow */}
+              <div className="absolute inset-0 bg-gold-500/30 rounded-3xl blur-xl group-hover:bg-gold-500/50 transition-all duration-500" />
+
+              <div className="relative px-12 py-8 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-3xl shadow-2xl shadow-gold-500/30 border border-gold-300/30 group-hover:scale-105 transition-transform duration-300">
+                <div className="flex items-center gap-6">
+                  {/* Animated phone icon */}
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-navy-900 rounded-full animate-ping opacity-20" />
+                    <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center">
+                      <Phone className="w-8 h-8 text-gold-400" />
+                    </div>
+                  </div>
+
+                  <div className="text-left">
+                    <span className="block text-navy-900/70 text-sm font-bold uppercase tracking-widest mb-1">Call Now</span>
+                    <span className="block font-display text-4xl sm:text-5xl font-black text-navy-900">(530) 701-6538</span>
+                  </div>
+                </div>
+              </div>
+
+              <span className="mt-4 text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
+                Free Consultation Available
+              </span>
             </a>
           </div>
         </div>
@@ -212,20 +279,22 @@ export default function Home() {
             {/* Services Image */}
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
               <Image
-                src="/images/money-back.png"
+                src="/images/money-back.webp"
                 alt="Get your maximum tax refund"
                 fill
                 className="object-contain"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
 
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-6 gold-line">
-                Check Out Our Exclusive Services
+                Check Out My Exclusive Services
               </h2>
               <p className="text-navy-600 text-lg leading-relaxed mb-8">
                 With 35+ years of experience in tax preparation and financial
-                services, we bring expertise and dedication to every client. Our
+                services, I bring expertise and dedication to every client. My
                 comprehensive services are designed to meet all your tax needs.
               </p>
               <ul className="space-y-4 mb-8">

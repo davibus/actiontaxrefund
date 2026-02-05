@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@500;600;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -118,4 +118,43 @@ body {
 ::selection {
   background-color: rgba(201, 162, 39, 0.2);
   color: #1a2744;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  /* Disable hover effects on mobile for better performance */
+  .card-lift:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Reduce animation complexity */
+  .btn-shine::before {
+    display: none;
+  }
+
+  /* Optimize touch targets */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+}
+
+/* Improve tap highlighting on mobile */
+@media (hover: none) {
+  button:active,
+  a:active {
+    opacity: 0.8;
+  }
 }

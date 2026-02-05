@@ -7,8 +7,8 @@ import { Menu, X, Phone } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Our Services', href: '/services' },
-  { name: 'About Us', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'About Me', href: '/about' },
   { name: 'FAQ', href: '/faq' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -37,15 +37,16 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/action-tax-refund-logo.png"
+              src="/images/action-tax-logo.webp"
               alt="Action Tax Refund"
               width={200}
               height={60}
               className="h-14 w-auto"
               priority
             />
+            <span className="font-display text-xl font-bold text-white">Action Tax Refund</span>
           </Link>
 
           {/* Desktop Navigation */}

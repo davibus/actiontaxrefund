@@ -33,10 +33,10 @@ export default function AboutPage() {
         <div className="absolute inset-0 geometric-accent opacity-30" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
-            About <span className="text-gold-400">Us</span>
+            About <span className="text-gold-400">Me</span>
           </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Get to know the team behind Action Tax Refund and our commitment
+            Get to know the person behind Action Tax Refund and my commitment
             to your financial success.
           </p>
         </div>
@@ -50,14 +50,16 @@ export default function AboutPage() {
             <div className="relative">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/mark-call.jpg"
-                  alt="Mark D. Call - Owner of Action Tax Refund"
+                  src="/images/mark-call.webp"
+                  alt="Mark D. Call, EA - Owner of Action Tax Refund"
                   fill
                   className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-navy-100">
-                <p className="font-display text-xl font-semibold text-navy-900">Mark D. Call</p>
+                <p className="font-display text-xl font-semibold text-navy-900">Mark D. Call, EA</p>
                 <p className="text-navy-500 text-sm">Owner & Tax Professional</p>
               </div>
             </div>
@@ -65,11 +67,11 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-6 gold-line">
-                Meet Mark D. Call
+                Meet Mark D. Call, EA
               </h2>
               <div className="space-y-6 text-navy-600 text-lg leading-relaxed">
                 <p>
-                  Welcome to Action Tax Refund! I&apos;m Mark D. Call,
+                  Welcome to Action Tax Refund! I&apos;m Mark D. Call, EA,
                   and I&apos;ve been helping individuals and businesses with their tax needs
                   for over 35 years.
                 </p>
@@ -114,10 +116,10 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-4">
-              Our Core Values
+              My Core Values
             </h2>
             <p className="text-navy-600 text-lg max-w-2xl mx-auto">
-              The principles that guide everything we do at Action Tax Refund.
+              The principles that guide everything I do at Action Tax Refund.
             </p>
           </div>
 
@@ -149,11 +151,11 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-r from-sage-600 to-sage-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
-            Our Mission
+            My Mission
           </h2>
           <p className="text-white/90 text-xl leading-relaxed mb-8">
             &ldquo;To provide accurate, reliable, and personalized
-            tax services that help our clients achieve their financial goals while building
+            tax services that help my clients achieve their financial goals while building
             lasting relationships based on trust and integrity.&rdquo;
           </p>
           <Link

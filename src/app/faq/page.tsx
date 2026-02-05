@@ -11,39 +11,39 @@ const faqs = [
   },
   {
     question: 'How much do your tax preparation services cost?',
-    answer: 'Our pricing varies based on the complexity of your return. We provide a free estimate before starting any work. Contact us for a personalized quote based on your specific situation.',
+    answer: 'My pricing varies based on the complexity of your return. I provide a free estimate before starting any work. Contact me for a personalized quote based on your specific situation.',
   },
   {
     question: 'How long does it take to prepare my tax return?',
-    answer: 'Most individual returns are completed within 1-2 business days. More complex returns may take longer. We\'ll give you a timeline estimate at your appointment. E-filed returns typically receive refunds within 10-21 days.',
+    answer: 'Most individual returns are completed within 1-2 business days. More complex returns may take longer. I\'ll give you a timeline estimate at your appointment. E-filed returns typically receive refunds within 10-21 days.',
   },
   {
     question: 'Do you offer year-round tax services?',
-    answer: 'Yes! While tax season is our busiest time, we provide year-round services including tax planning, quarterly estimated payments, IRS representation, bookkeeping, and tax consulting. We\'re here to help whenever you need us.',
+    answer: 'Yes! While tax season is my busiest time, I provide year-round services including tax planning, quarterly estimated payments, IRS representation, bookkeeping, and tax consulting. I\'m here to help whenever you need me.',
   },
   {
     question: 'Can you help with back taxes or unfiled returns?',
-    answer: 'Absolutely. We can help you file prior year returns and work with the IRS to resolve any outstanding issues. We\'ll help you understand your options and create a plan to get you back on track.',
+    answer: 'Absolutely. I can help you file prior year returns and work with the IRS to resolve any outstanding issues. I\'ll help you understand your options and create a plan to get you back on track.',
   },
   {
     question: 'What if I receive an IRS notice or audit letter?',
-    answer: 'Don\'t panic! Contact us immediately. We offer IRS representation services and will help you respond appropriately. We\'ll review the notice, explain what it means, and represent you in communications with the IRS.',
+    answer: 'Don\'t panic! Contact me immediately. I offer IRS representation services and will help you respond appropriately. I\'ll review the notice, explain what it means, and represent you in communications with the IRS.',
   },
   {
     question: 'Do you prepare business tax returns?',
-    answer: 'Yes, we prepare returns for sole proprietors, partnerships, LLCs, and S-corporations. We also offer bookkeeping services and quarterly tax planning to help keep your business finances organized year-round.',
+    answer: 'Yes, I prepare returns for sole proprietors, partnerships, LLCs, and S-corporations. I also offer bookkeeping services and quarterly tax planning to help keep your business finances organized year-round.',
   },
   {
     question: 'How do I schedule an appointment?',
-    answer: 'You can schedule an appointment by calling us at (530) 701-6538 or using our online scheduling form. During tax season, we recommend booking early as appointments fill up quickly.',
+    answer: 'You can schedule an appointment by calling me at (530) 701-6538 or using my online scheduling form. During tax season, I recommend booking early as appointments fill up quickly.',
   },
   {
     question: 'What payment methods do you accept?',
-    answer: 'We accept cash, checks, and major credit cards. For your convenience, we also offer the option to deduct our fee from your refund (refund transfer).',
+    answer: 'I accept cash, checks, and major credit cards. For your convenience, I also offer the option to deduct my fee from your refund (refund transfer).',
   },
   {
     question: 'Is my information kept confidential?',
-    answer: 'Absolutely. We take your privacy seriously and follow strict confidentiality protocols. Your personal and financial information is never shared with third parties and is secured using industry-standard practices.',
+    answer: 'Absolutely. I take your privacy seriously and follow strict confidentiality protocols. Your personal and financial information is never shared with third parties and is secured using industry-standard practices.',
   },
 ];
 
@@ -64,7 +64,7 @@ export default function FAQPage() {
             Frequently Asked <span className="text-gold-400">Questions</span>
           </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Find answers to common questions about our tax services.
+            Find answers to common questions about my tax services.
             Can&apos;t find what you&apos;re looking for? Contact us directly.
           </p>
         </div>
@@ -114,8 +114,8 @@ export default function FAQPage() {
             Still Have Questions?
           </h2>
           <p className="text-navy-600 text-lg mb-8 max-w-2xl mx-auto">
-            We&apos;re here to help! Contact us directly and we&apos;ll be happy
-            to answer any questions you have about our services.
+            I&apos;m here to help! Contact me directly and I&apos;ll be happy
+            to answer any questions you have about my services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -48,7 +48,7 @@ export default function SchedulePage() {
             Schedule an <span className="text-gold-400">Appointment</span>
           </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
-            Book your tax appointment with Mark D. Call today.
+            Book your tax appointment with Mark D. Call, EA today.
             Choose a time that works best for you.
           </p>
         </div>

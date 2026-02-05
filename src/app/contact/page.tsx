@@ -21,113 +21,18 @@ export default function ContactPage() {
       {/* Contact Content */}
       <section className="py-20 bg-white paper-texture">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div>
-              <h2 className="font-display text-2xl font-bold text-navy-900 mb-6 gold-line">
-                Send Us a Message
-              </h2>
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-navy-700 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all"
-                      placeholder="John"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-navy-700 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all"
-                      placeholder="Doe"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all"
-                    placeholder="(530) 555-0123"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-navy-700 mb-2">
-                    Service Interested In
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all bg-white"
-                  >
-                    <option value="">Select a service...</option>
-                    <option value="individual">Individual Tax Preparation</option>
-                    <option value="business">Business Tax Services</option>
-                    <option value="planning">Tax Planning</option>
-                    <option value="representation">IRS Representation</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-xl border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-transparent transition-all resize-none"
-                    placeholder="How can we help you?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg btn-shine"
-                >
-                  Send Message
-                  <ArrowRight className="w-5 h-5" />
-                </button>
-              </form>
-            </div>
-
-            {/* Contact Info */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            {/* Get in Touch - Left Column */}
             <div>
               <h2 className="font-display text-2xl font-bold text-navy-900 mb-6 gold-line">
                 Get in Touch
               </h2>
               <p className="text-navy-600 text-lg mb-8">
-                Have questions about our services? Ready to schedule an appointment?
+                Have questions about my services? Ready to schedule an appointment?
                 Reach out to us using any of the methods below.
               </p>
 
-              <div className="space-y-6 mb-10">
+              <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gold-100 flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-gold-600" />
@@ -179,20 +84,20 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
+            </div>
 
-              {/* Map */}
-              <div className="aspect-video rounded-2xl overflow-hidden border border-navy-200">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.8!2d-121.616!3d39.140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e0f1c8c8c8f%3A0x0!2s1060+Northridge+Dr%2C+Yuba+City%2C+CA+95991!5e0!3m2!1sen!2sus!4v1"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Action Tax Refund Location"
-                />
-              </div>
+            {/* Map - Right Column */}
+            <div className="aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-2xl overflow-hidden border border-navy-200">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.8!2d-121.616!3d39.140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e0f1c8c8c8f%3A0x0!2s1060+Northridge+Dr%2C+Yuba+City%2C+CA+95991!5e0!3m2!1sen!2sus!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Action Tax Refund Location"
+              />
             </div>
           </div>
         </div>
@@ -205,7 +110,7 @@ export default function ContactPage() {
             Prefer to Schedule Online?
           </h2>
           <p className="text-white/80 mb-6">
-            Use our online scheduling tool to book an appointment at your convenience.
+            Use my online scheduling tool to book an appointment at your convenience.
           </p>
           <Link
             href="/schedule"

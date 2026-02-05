@@ -4,8 +4,8 @@ import { Phone, MapPin, Mail, Facebook, Instagram } from 'lucide-react';
 const navigation = {
   main: [
     { name: 'Home', href: '/' },
-    { name: 'Our Services', href: '/services' },
-    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'About Me', href: '/about' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
     { name: 'Schedule Appointment', href: '/schedule' },
@@ -79,7 +79,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-display text-lg font-semibold mb-6 text-white">
-              Our Services
+              Services
             </h3>
             <ul className="space-y-3">
               {navigation.services.map((item) => (
@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="font-display text-lg font-semibold mb-6 text-white">
-              Contact Us
+              Contact Me
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
@@ -148,7 +148,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Action Tax Refund. All rights reserved.
             </p>
             <p className="text-white/40 text-sm">
-              Mark D. Call | Professional Tax Services
+              Mark D. Call, EA | Professional Tax Services
             </p>
           </div>
         </div>

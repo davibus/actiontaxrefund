@@ -16,7 +16,7 @@ const services = [
     id: 'individual',
     icon: Calculator,
     title: 'Individual Tax Preparation',
-    description: 'Professional preparation of personal tax returns for individuals and families. We ensure you claim every deduction and credit you\'re entitled to.',
+    description: 'Professional preparation of personal tax returns for individuals and families. I ensure you claim every deduction and credit you\'re entitled to.',
     features: [
       'Federal and State Returns',
       'E-filing for Faster Refunds',
@@ -30,7 +30,7 @@ const services = [
     id: 'business',
     icon: Building2,
     title: 'Business Tax Services',
-    description: 'Comprehensive tax services for small businesses, partnerships, and corporations. We help you stay compliant while minimizing your tax burden.',
+    description: 'Comprehensive tax services for small businesses, partnerships, and corporations. I help you stay compliant while minimizing your tax burden.',
     features: [
       'Business Return Preparation',
       'Quarterly Estimated Taxes',
@@ -58,7 +58,7 @@ const services = [
     id: 'representation',
     icon: Shield,
     title: 'IRS Representation',
-    description: 'Expert representation if you\'re facing an IRS audit or need help resolving tax issues. We\'ll advocate on your behalf.',
+    description: 'Expert representation if you\'re facing an IRS audit or need help resolving tax issues. I\'ll advocate on your behalf.',
     features: [
       'Audit Representation',
       'IRS Notice Response',
@@ -72,7 +72,7 @@ const services = [
     id: 'bookkeeping',
     icon: FileText,
     title: 'Bookkeeping Services',
-    description: 'Keep your financial records organized and accurate with our professional bookkeeping services.',
+    description: 'Keep your financial records organized and accurate with my professional bookkeeping services.',
     features: [
       'Monthly Bookkeeping',
       'Financial Statement Preparation',
@@ -86,7 +86,7 @@ const services = [
     id: 'consulting',
     icon: Users,
     title: 'Tax Consulting',
-    description: 'Get expert advice on complex tax situations. We provide guidance for major life events and financial decisions.',
+    description: 'Get expert advice on complex tax situations. I provide guidance for major life events and financial decisions.',
     features: [
       'Home Purchase/Sale Guidance',
       'Stock Options Consulting',
@@ -127,7 +127,7 @@ export default function ServicesPage() {
         <div className="absolute inset-0 geometric-accent opacity-30" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-white mb-6">
-            Our <span className="text-gold-400">Services</span>
+            My <span className="text-gold-400">Services</span>
           </h1>
           <p className="text-xl text-white/70 max-w-2xl mx-auto">
             Comprehensive tax and financial services tailored to meet your individual
@@ -180,8 +180,7 @@ export default function ServicesPage() {
             Ready to Get Started?
           </h2>
           <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your tax needs and schedule an appointment
-            with Mark D. Call.
+            Contact me today to discuss your tax needs and schedule an appointment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
