@@ -32,7 +32,7 @@ export default function Home() {
         <div className="absolute inset-0 geometric-accent opacity-20" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 flex items-center min-h-[600px] lg:min-h-[700px]">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-24 lg:pt-16 lg:pb-32 flex items-start min-h-[600px] lg:min-h-[700px]">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold-500/10 border border-gold-500/20 text-gold-400 text-sm font-medium mb-6 backdrop-blur-sm">
               <Star className="w-4 h-4 fill-current" />
@@ -75,7 +75,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/schedule"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
               >
                 Schedule Appointment
@@ -88,17 +88,6 @@ export default function Home() {
                 Our Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
-            </div>
-            {/* Floating accent */}
-            <div className="mt-12 inline-flex items-center gap-6">
-              <div className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
-                <p className="font-display text-3xl font-bold text-white">35+</p>
-                <p className="text-sage-300 text-sm">Years Experience</p>
-              </div>
-              <div className="px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10">
-                <p className="font-display text-3xl font-bold text-white">4000+</p>
-                <p className="text-sage-300 text-sm">Satisfied Clients</p>
-              </div>
             </div>
             {/* Free Consultation Boxes */}
             <div className="mt-6 flex flex-wrap gap-4">
@@ -282,7 +271,7 @@ export default function Home() {
                 src="/images/money-back.webp"
                 alt="Get your maximum tax refund"
                 fill
-                className="object-contain"
+                className="object-contain drop-shadow-lg"
                 loading="lazy"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />

@@ -61,7 +61,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="/schedule"
+              href="/contact"
               className="ml-4 px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-lg font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
             >
               Schedule Appointment
@@ -97,7 +97,7 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="/schedule"
+                href="/contact"
                 className="mt-2 px-6 py-3 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-lg font-semibold text-center hover:from-gold-400 hover:to-gold-500 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >

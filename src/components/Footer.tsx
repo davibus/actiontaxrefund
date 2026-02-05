@@ -8,7 +8,7 @@ const navigation = {
     { name: 'About Me', href: '/about' },
     { name: 'FAQ', href: '/faq' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Schedule Appointment', href: '/schedule' },
+    { name: 'Schedule Appointment', href: '/contact' },
   ],
   services: [
     { name: 'Individual Tax Preparation', href: '/services#individual' },
