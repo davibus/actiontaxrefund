@@ -37,16 +37,16 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3">
             <Image
-              src="/images/action-tax-logo.webp"
+              src="/images/logo.png"
               alt="Action Tax Refund"
-              width={200}
-              height={60}
-              className="h-14 w-auto"
+              width={56}
+              height={56}
+              className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
               priority
             />
-            <span className="font-display text-xl font-bold text-white">Action Tax Refund</span>
+            <span className="font-display text-base sm:text-lg md:text-xl font-bold text-white">Action Tax Refund</span>
           </Link>
 
           {/* Desktop Navigation */}
