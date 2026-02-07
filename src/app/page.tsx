@@ -109,7 +109,7 @@ export default function Home() {
       {/* About Preview */}
       <section className="py-20 bg-gradient-to-b from-navy-900 to-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-3xl mx-auto text-center">
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
                 One on One <span className="text-gold-400">Personal Service</span>
@@ -133,22 +133,6 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* About Image */}
-            <div className="relative">
-              <div className="aspect-square rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                <Image
-                  src="/images/mark-call.webp"
-                  alt="Mark D. Call, EA - Owner of Action Tax Refund"
-                  fill
-                  className="object-cover"
-                  loading="lazy"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              {/* Decorative accent */}
-              <div className="absolute -bottom-4 -left-4 w-32 h-32 rounded-xl bg-gold-500/20 -z-10" />
-              <div className="absolute -top-4 -right-4 w-24 h-24 rounded-xl bg-sage-500/20 -z-10" />
-            </div>
           </div>
         </div>
       </section>

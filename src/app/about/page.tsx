@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Award, Users, Clock, Target, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 const values = [
@@ -45,24 +44,7 @@ export default function AboutPage() {
       {/* About Content */}
       <section className="py-20 bg-white paper-texture">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Photo */}
-            <div className="relative">
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/mark-call.webp"
-                  alt="Mark D. Call, EA - Owner of Action Tax Refund"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-4 shadow-lg border border-navy-100">
-                <p className="font-display text-xl font-semibold text-navy-900">Mark D. Call, EA</p>
-                <p className="text-navy-500 text-sm">Owner & Tax Professional</p>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto">
 
             {/* Content */}
             <div>
