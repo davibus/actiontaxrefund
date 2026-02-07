@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ArrowRight, Phone } from 'lucide-react';
+import { ChevronDown, ArrowRight, Phone, MessageSquare } from 'lucide-react';
 
 const faqs = [
   {
@@ -131,6 +131,13 @@ export default function FAQPage() {
             >
               <Phone className="w-5 h-5" />
               (530) 701-6538
+            </a>
+            <a
+              href="sms:530-701-6538"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-sage-500 text-white rounded-xl font-semibold hover:bg-sage-600 transition-all"
+            >
+              <MessageSquare className="w-5 h-5" />
+              Text Us
             </a>
           </div>
         </div>

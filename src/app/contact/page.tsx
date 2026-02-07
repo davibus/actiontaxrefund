@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MapPin, Mail, Clock, ArrowRight, Calendar, CheckCircle2 } from 'lucide-react';
+import { Phone, MapPin, Mail, Clock, ArrowRight, Calendar, CheckCircle2, MessageSquare } from 'lucide-react';
 
 const appointmentTypes = [
   {
@@ -83,6 +83,18 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-6 h-6 text-sage-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-navy-900 mb-1">Text Us</h3>
+                    <a href="sms:530-701-6538" className="text-navy-600 hover:text-gold-600 transition-colors">
+                      Send a text message
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-sage-600" />
                   </div>
                   <div>
@@ -113,9 +125,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-navy-900 mb-1">Business Hours</h3>
                     <p className="text-navy-600">
-                      Monday - Friday: 9am - 5pm<br />
-                      Saturday: By Appointment<br />
-                      Sunday: Closed
+                      Monday - Saturday: 9am - 5pm
                     </p>
                   </div>
                 </div>
@@ -178,6 +188,13 @@ export default function ContactPage() {
                     >
                       <Phone className="w-5 h-5" />
                       Call to Schedule: (530) 701-6538
+                    </a>
+                    <a
+                      href="sms:530-701-6538"
+                      className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-sage-500 to-sage-600 text-white rounded-xl font-semibold hover:from-sage-400 hover:to-sage-500 transition-all"
+                    >
+                      <MessageSquare className="w-5 h-5" />
+                      Text Us to Schedule
                     </a>
                     <p className="text-navy-400 text-sm">
                       I&apos;ll find the perfect time for your visit
@@ -269,14 +286,10 @@ export default function ContactPage() {
               I&apos;m here to help during the following hours
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="bg-navy-50 rounded-xl p-6 border border-navy-100 text-center">
-              <p className="font-semibold text-navy-900">Monday - Friday</p>
+              <p className="font-semibold text-navy-900">Monday - Saturday</p>
               <p className="text-navy-600">9:00 AM - 5:00 PM</p>
-            </div>
-            <div className="bg-navy-50 rounded-xl p-6 border border-navy-100 text-center">
-              <p className="font-semibold text-navy-900">Saturday</p>
-              <p className="text-navy-600">By Appointment</p>
             </div>
             <div className="bg-navy-50 rounded-xl p-6 border border-navy-100 text-center">
               <p className="font-semibold text-navy-900">Sunday</p>

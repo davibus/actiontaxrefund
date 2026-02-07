@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MapPin, Mail, Facebook, Instagram } from 'lucide-react';
+import { Phone, MapPin, Mail, Facebook, Instagram, MessageSquare } from 'lucide-react';
 
 const navigation = {
   main: [
@@ -109,6 +109,17 @@ export default function Footer() {
                   <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Phone</p>
                   <a href="tel:530-701-6538" className="text-white hover:text-gold-400 transition-colors">
                     (530) 701-6538
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <MessageSquare className="w-4 h-4 text-gold-400" />
+                </div>
+                <div>
+                  <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Text</p>
+                  <a href="sms:530-701-6538" className="text-white hover:text-gold-400 transition-colors">
+                    Text Us
                   </a>
                 </div>
               </div>

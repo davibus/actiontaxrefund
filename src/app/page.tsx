@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Calculator, Truck, HeadphonesIcon, Star, ArrowRight, CheckCircle2, Phone } from 'lucide-react';
+import { Calculator, Truck, HeadphonesIcon, Star, ArrowRight, CheckCircle2, Phone, MessageSquare } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -39,8 +39,7 @@ export default function Home() {
               Trusted Tax Professionals
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              Expert Tax Services{' '}
-              <span className="text-gold-400">Maximum Returns</span>
+              Expert <span className="text-gold-400">Tax Returns</span>
             </h1>
             <p className="text-2xl sm:text-3xl text-white/80 leading-relaxed mb-8 max-w-xl">
               Claim Prepared.<br />
@@ -48,30 +47,46 @@ export default function Home() {
               Refunds Maximized.
             </p>
             {/* Prominent Phone Number */}
-            <a
-              href="tel:530-701-6538"
-              className="group relative inline-flex items-center gap-4 mb-8"
-            >
-              {/* Animated pulse ring */}
-              <span className="absolute inset-2 rounded-2xl bg-gold-500/10 animate-ping" style={{ animationDuration: '3s' }} />
-              <span className="absolute inset-1 rounded-2xl bg-gold-500/5 animate-pulse" />
+            <div className="flex flex-wrap items-center gap-4 mb-8">
+              <a
+                href="tel:530-701-6538"
+                className="group relative inline-flex items-center gap-4"
+              >
+                {/* Animated pulse ring */}
+                <span className="absolute inset-2 rounded-2xl bg-gold-500/10 animate-ping" style={{ animationDuration: '3s' }} />
+                <span className="absolute inset-1 rounded-2xl bg-gold-500/5 animate-pulse" />
 
-              <div className="relative flex items-center gap-4 px-6 py-4 rounded-2xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 shadow-2xl shadow-gold-500/40 border-2 border-gold-300/50">
-                {/* Phone icon with ring animation */}
-                <div className="relative">
-                  <div className="absolute inset-0 bg-navy-900/20 rounded-full blur-md" />
-                  <div className="relative w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Phone className="w-7 h-7 text-gold-400 group-hover:animate-bounce" />
+                <div className="relative flex items-center gap-4 px-6 py-4 rounded-2xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-500 shadow-2xl shadow-gold-500/40 border-2 border-gold-300/50">
+                  {/* Phone icon with ring animation */}
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-navy-900/20 rounded-full blur-md" />
+                    <div className="relative w-14 h-14 rounded-full bg-navy-900 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Phone className="w-7 h-7 text-gold-400 group-hover:animate-bounce" />
+                    </div>
+                  </div>
+
+                  {/* Phone number text */}
+                  <div className="flex flex-col">
+                    <span className="text-navy-900/70 text-sm font-semibold uppercase tracking-wider">Call Now - Free Consultation</span>
+                    <span className="font-display text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">(530) 701-6538</span>
                   </div>
                 </div>
+              </a>
 
-                {/* Phone number text */}
-                <div className="flex flex-col">
-                  <span className="text-navy-900/70 text-sm font-semibold uppercase tracking-wider">Call Now - Free Consultation</span>
-                  <span className="font-display text-3xl sm:text-4xl font-black text-navy-900 tracking-tight">(530) 701-6538</span>
+              {/* Text Us Button */}
+              <a
+                href="sms:530-701-6538"
+                className="group relative inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-sage-500 to-sage-600 shadow-xl shadow-sage-500/30 border-2 border-sage-400/50 hover:scale-105 transition-transform duration-300"
+              >
+                <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <MessageSquare className="w-6 h-6 text-white" />
                 </div>
-              </div>
-            </a>
+                <div className="flex flex-col">
+                  <span className="text-white/80 text-xs font-semibold uppercase tracking-wider">Prefer Texting?</span>
+                  <span className="font-display text-xl font-bold text-white">Text Us</span>
+                </div>
+              </a>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -212,35 +227,60 @@ export default function Home() {
               Talk to Mark D. Call, EA today and discover how much you could be getting back
             </p>
 
-            {/* Large prominent phone CTA */}
-            <a
-              href="tel:530-701-6538"
-              className="group relative inline-flex flex-col items-center"
-            >
-              {/* Outer glow */}
-              <div className="absolute inset-0 bg-gold-500/30 rounded-3xl blur-xl group-hover:bg-gold-500/50 transition-all duration-500" />
+            {/* Large prominent phone & text CTAs */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:530-701-6538"
+                className="group relative inline-flex flex-col items-center"
+              >
+                {/* Outer glow */}
+                <div className="absolute inset-0 bg-gold-500/30 rounded-2xl blur-xl group-hover:bg-gold-500/50 transition-all duration-500" />
 
-              <div className="relative px-12 py-8 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-3xl shadow-2xl shadow-gold-500/30 border border-gold-300/30 group-hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center gap-6">
-                  {/* Animated phone icon */}
-                  <div className="relative">
-                    <div className="absolute inset-0 bg-navy-900 rounded-full animate-ping opacity-20" />
-                    <div className="w-16 h-16 rounded-full bg-navy-900 flex items-center justify-center">
-                      <Phone className="w-8 h-8 text-gold-400" />
+                <div className="relative px-8 py-5 bg-gradient-to-br from-gold-400 via-gold-500 to-gold-600 rounded-2xl shadow-2xl shadow-gold-500/30 border border-gold-300/30 group-hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-4">
+                    {/* Animated phone icon */}
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-navy-900 rounded-full animate-ping opacity-20" />
+                      <div className="w-12 h-12 rounded-full bg-navy-900 flex items-center justify-center">
+                        <Phone className="w-6 h-6 text-gold-400" />
+                      </div>
+                    </div>
+
+                    <div className="text-left">
+                      <span className="block text-navy-900/70 text-xs font-bold uppercase tracking-widest mb-1">Call Now</span>
+                      <span className="block font-display text-2xl sm:text-3xl font-black text-navy-900">(530) 701-6538</span>
                     </div>
                   </div>
+                </div>
+              </a>
 
-                  <div className="text-left">
-                    <span className="block text-navy-900/70 text-sm font-bold uppercase tracking-widest mb-1">Call Now</span>
-                    <span className="block font-display text-4xl sm:text-5xl font-black text-navy-900">(530) 701-6538</span>
+              <span className="text-white/50 text-lg font-medium hidden sm:block">or</span>
+
+              <a
+                href="sms:530-701-6538"
+                className="group relative inline-flex flex-col items-center"
+              >
+                {/* Outer glow */}
+                <div className="absolute inset-0 bg-sage-500/30 rounded-2xl blur-xl group-hover:bg-sage-500/50 transition-all duration-500" />
+
+                <div className="relative px-8 py-5 bg-gradient-to-br from-sage-400 via-sage-500 to-sage-600 rounded-2xl shadow-2xl shadow-sage-500/30 border border-sage-300/30 group-hover:scale-105 transition-transform duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
+                      <MessageSquare className="w-6 h-6 text-white" />
+                    </div>
+
+                    <div className="text-left">
+                      <span className="block text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Text Us</span>
+                      <span className="block font-display text-2xl font-black text-white">Send a Message</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
+            </div>
 
-              <span className="mt-4 text-gold-400 font-semibold group-hover:text-gold-300 transition-colors">
-                Free Consultation Available
-              </span>
-            </a>
+            <p className="mt-6 text-gold-400 font-semibold">
+              Free Consultation Available
+            </p>
           </div>
         </div>
       </section>

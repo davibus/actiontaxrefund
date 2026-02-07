@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Phone, MessageSquare } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -21,10 +21,16 @@ export default function Header() {
       {/* Top bar with contact info */}
       <div className="bg-navy-950 text-white/80 py-2 text-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <Phone className="w-4 h-4 text-gold-500" />
-            <a href="tel:530-701-6538" className="hover:text-gold-400 transition-colors">
-              (530) 701-6538
+          <div className="flex items-center gap-4">
+            <a href="tel:530-701-6538" className="flex items-center gap-2 hover:text-gold-400 transition-colors group">
+              <Phone className="w-4 h-4 text-gold-500 group-hover:text-gold-400" />
+              <span className="hidden xs:inline">(530) 701-6538</span>
+              <span className="xs:hidden">Call</span>
+            </a>
+            <span className="text-white/30">|</span>
+            <a href="sms:530-701-6538" className="flex items-center gap-2 hover:text-gold-400 transition-colors group">
+              <MessageSquare className="w-4 h-4 text-sage-400 group-hover:text-gold-400" />
+              <span>Text Us</span>
             </a>
           </div>
           <div className="hidden sm:block text-white/60">
@@ -64,7 +70,7 @@ export default function Header() {
               href="/contact"
               className="ml-4 px-6 py-2.5 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-lg font-semibold text-sm hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
             >
-              Schedule Appointment
+              Schedule Free Consultation
             </Link>
           </div>
 
@@ -101,7 +107,7 @@ export default function Header() {
                 className="mt-2 px-6 py-3 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-lg font-semibold text-center hover:from-gold-400 hover:to-gold-500 transition-all"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Schedule Appointment
+                Schedule Free Consultation
               </Link>
             </div>
           </div>
