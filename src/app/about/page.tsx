@@ -49,11 +49,11 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-6 gold-line">
-                Meet Mark D. Call, EA
+                Meet Mark D. Call, CRTP
               </h2>
               <div className="space-y-6 text-navy-600 text-lg leading-relaxed">
                 <p>
-                  Welcome to Action Tax Refund! I&apos;m Mark D. Call, EA,
+                  Welcome to Action Tax Refund! I&apos;m Mark D. Call, CRTP,
                   and I&apos;ve been helping individuals and businesses with their tax needs
                   for over 35 years.
                 </p>

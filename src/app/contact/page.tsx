@@ -99,8 +99,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy-900 mb-1">Email</h3>
-                    <a href="mailto:info@actiontaxrefund.com" className="text-navy-600 hover:text-gold-600 transition-colors">
-                      info@actiontaxrefund.com
+                    <a href="mailto:markdcall@gmail.com" className="text-navy-600 hover:text-gold-600 transition-colors">
+                      markdcall@gmail.com
                     </a>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
               Schedule an <span className="text-gold-600">Appointment</span>
             </h2>
             <p className="text-xl text-navy-600 max-w-2xl mx-auto">
-              Book your tax appointment with Mark D. Call, EA today.
+              Book your tax appointment with Mark D. Call, CRTP today.
             </p>
           </div>
 

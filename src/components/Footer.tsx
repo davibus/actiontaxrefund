@@ -102,9 +102,9 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-sage-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <a href="tel:530-701-6538" className="w-8 h-8 rounded-lg bg-sage-500/20 hover:bg-sage-500/40 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
                   <Phone className="w-4 h-4 text-sage-400" />
-                </div>
+                </a>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Phone</p>
                   <a href="tel:530-701-6538" className="text-white hover:text-gold-400 transition-colors">
@@ -113,9 +113,9 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-gold-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <a href="sms:530-701-6538" className="w-8 h-8 rounded-lg bg-gold-500/20 hover:bg-gold-500/40 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
                   <MessageSquare className="w-4 h-4 text-gold-400" />
-                </div>
+                </a>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Text</p>
                   <a href="sms:530-701-6538" className="text-white hover:text-gold-400 transition-colors">
@@ -124,25 +124,25 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-sage-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <a href="https://maps.google.com/?q=1060+Northridge+Dr+Yuba+City+CA+95991" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-lg bg-sage-500/20 hover:bg-sage-500/40 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
                   <MapPin className="w-4 h-4 text-sage-400" />
-                </div>
+                </a>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Address</p>
-                  <p className="text-white/80">
+                  <a href="https://maps.google.com/?q=1060+Northridge+Dr+Yuba+City+CA+95991" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-gold-400 transition-colors">
                     1060 Northridge Dr.<br />
                     Yuba City, CA 95991
-                  </p>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-sage-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <a href="mailto:markdcall@gmail.com" className="w-8 h-8 rounded-lg bg-sage-500/20 hover:bg-sage-500/40 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors">
                   <Mail className="w-4 h-4 text-sage-400" />
-                </div>
+                </a>
                 <div>
                   <p className="text-white/40 text-xs uppercase tracking-wider mb-1">Email</p>
-                  <a href="mailto:info@actiontaxrefund.com" className="text-white hover:text-gold-400 transition-colors">
-                    info@actiontaxrefund.com
+                  <a href="mailto:markdcall@gmail.com" className="text-white hover:text-gold-400 transition-colors">
+                    markdcall@gmail.com
                   </a>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Action Tax Refund. All rights reserved.
             </p>
             <p className="text-white/40 text-sm">
-              Mark D. Call, EA | Professional Tax Services
+              Mark D. Call, CRTP | Professional Tax Services
             </p>
           </div>
         </div>

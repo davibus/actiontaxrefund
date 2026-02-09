@@ -132,7 +132,7 @@ export default function Home() {
               <p className="text-white/70 text-lg leading-relaxed mb-6">
                 Action Tax Refund was established with a simple mission:
                 to provide accurate, reliable tax services with the personal touch that
-                larger firms can&apos;t offer. I&apos;m Mark D. Call, EA, and I bring over 4 decades of experience to every return I prepare.
+                larger firms can&apos;t offer. I&apos;m Mark D. Call, CRTP, and I bring over 4 decades of experience to every return I prepare.
               </p>
               <p className="text-white/70 text-lg leading-relaxed mb-8">
                 I take pride in my commitment to customer satisfaction. Every client
@@ -224,7 +224,7 @@ export default function Home() {
               Ready to Get Your <span className="text-gold-400">Maximum Refund?</span>
             </h2>
             <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
-              Talk to Mark D. Call, EA today and discover how much you could be getting back
+              Talk to Mark D. Call, CRTP today and discover how much you could be getting back
             </p>
 
             {/* Large prominent phone & text CTAs */}
@@ -303,7 +303,7 @@ export default function Home() {
 
             <div className="order-1 lg:order-2">
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-navy-900 mb-6 gold-line">
-                Check Out My Exclusive Services
+                Exclusive Services
               </h2>
               <p className="text-navy-600 text-lg leading-relaxed mb-8">
                 With 35+ years of experience in tax preparation and financial
