@@ -88,22 +88,6 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine"
-              >
-                Schedule Appointment
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-all backdrop-blur-sm"
-              >
-                Our Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
             {/* Free Consultation Boxes */}
             <div className="mt-6 flex flex-wrap gap-4">
               <div className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-sage-600 to-sage-700 shadow-lg shadow-sage-900/20 border border-white/10 backdrop-blur-sm transform hover:scale-105 transition-all duration-300">
