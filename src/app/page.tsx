@@ -108,8 +108,9 @@ export default function Home() {
       {/* About Preview */}
       <section className="py-20 bg-gradient-to-b from-navy-900 to-navy-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <div className="text-center lg:text-left order-2 lg:order-1">
               <h2 className="font-display text-3xl sm:text-4xl font-bold text-white mb-6">
                 One on One <span className="text-gold-400">Personal Service</span>
               </h2>
@@ -132,6 +133,21 @@ export default function Home() {
               </Link>
             </div>
 
+            {/* Right Column - Image */}
+            <div className="w-full max-w-sm mx-auto lg:mx-0 lg:ml-auto order-1 lg:order-2">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30">
+                <Image
+                  src="/images/mark-call.jpeg"
+                  alt="Mark D. Call, CRTP - Tax Professional with over 4 decades of experience"
+                  width={384}
+                  height={512}
+                  className="object-cover w-full h-auto"
+                  sizes="(max-width: 768px) 80vw, (max-width: 1024px) 40vw, 384px"
+                />
+                {/* Decorative border */}
+                <div className="absolute inset-0 ring-1 ring-white/10 rounded-2xl pointer-events-none" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

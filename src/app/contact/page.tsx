@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, MapPin, Mail, Clock, ArrowRight, Calendar, CheckCircle2, MessageSquare } from 'lucide-react';
 
 const appointmentTypes = [
@@ -146,6 +147,25 @@ export default function ContactPage() {
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Office Image Section */}
+      <section className="py-12 bg-navy-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/action-tax-refund-office.png"
+              alt="Action Tax Refund Office - 1060 Northridge Dr, Yuba City, CA"
+              width={1200}
+              height={400}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 90vw, 896px"
+            />
+          </div>
+          <p className="text-center text-navy-600 mt-4 text-sm">
+            Our office at 1060 Northridge Dr, Yuba City, CA 95991
+          </p>
         </div>
       </section>
 
