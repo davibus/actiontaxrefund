@@ -41,6 +41,7 @@ export default function RootLayout({
             gtag('js', new Date());
             gtag('config', 'AW-17940935436');
             gtag('config', 'G-FX1D385BEK');
+            gtag('event', 'conversion_event_default', {});
           `}
         </Script>
       </head>
