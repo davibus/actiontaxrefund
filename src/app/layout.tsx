@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GTMTracker from "@/components/GTMTracker";
 
 export const metadata: Metadata = {
   title: "Action Tax Refund | Professional Tax Services in Yuba City, CA",
@@ -30,22 +31,26 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17940935436"
-          strategy="afterInteractive"
-        />
-        <Script id="google-tags" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-17940935436');
-            gtag('config', 'G-FX1D385BEK');
-            gtag('event', 'conversion_event_default', {});
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KTF9P59N');
           `}
         </Script>
       </head>
       <body className="antialiased min-h-screen flex flex-col touch-manipulation">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KTF9P59N"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        <GTMTracker />
         <Header />
         <main className="flex-1">
           {children}

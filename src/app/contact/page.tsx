@@ -133,18 +133,34 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map - Right Column */}
-            <div className="aspect-square lg:aspect-auto lg:h-full min-h-[400px] rounded-2xl overflow-hidden border border-navy-200">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3091.8!2d-121.616!3d39.140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809b3e0f1c8c8c8f%3A0x0!2s1060+Northridge+Dr%2C+Yuba+City%2C+CA+95991!5e0!3m2!1sen!2sus!4v1"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Action Tax Refund Location"
-              />
+            {/* Contact Form - Right Column */}
+            <div className="bg-white rounded-2xl shadow-xl shadow-navy-900/5 border border-navy-100 p-8">
+              <h3 className="font-display text-2xl font-bold text-navy-900 mb-6 pb-4 border-b border-navy-100">
+                Send a Message
+              </h3>
+              <form data-gtm="contact_form" className="space-y-6" action="mailto:markdcall@gmail.com" method="post" encType="text/plain">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-1">Full Name *</label>
+                  <input type="text" id="name" name="name" required className="w-full px-4 py-3 rounded-lg border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all placeholder:text-navy-300" placeholder="John Doe" />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-1">Email Address *</label>
+                    <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-lg border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all placeholder:text-navy-300" placeholder="john@example.com" />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-lg border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all placeholder:text-navy-300" placeholder="(555) 123-4567" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-1">How can I help you? *</label>
+                  <textarea id="message" name="message" rows={4} required className="w-full px-4 py-3 rounded-lg border border-navy-200 focus:ring-2 focus:ring-gold-500 focus:border-gold-500 outline-none transition-all placeholder:text-navy-300 resize-none" placeholder="Please describe your tax needs..."></textarea>
+                </div>
+                <button type="submit" className="w-full py-4 bg-gradient-to-r from-gold-500 to-gold-600 text-navy-900 rounded-xl font-semibold hover:from-gold-400 hover:to-gold-500 transition-all shadow-lg shadow-gold-500/20 btn-shine">
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>

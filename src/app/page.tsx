@@ -330,6 +330,7 @@ export default function Home() {
               </ul>
               <Link
                 href="/services"
+                data-gtm="start_tax_refund"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-navy-900 text-white rounded-xl font-semibold hover:bg-navy-800 transition-all"
               >
                 Get Started
