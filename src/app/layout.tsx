@@ -3,7 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import GTMTracker from "@/components/GTMTracker";
+import { Suspense } from "react";
+import GA4Tracker, { GA_MEASUREMENT_ID } from "@/components/GA4Tracker";
 
 export const metadata: Metadata = {
   title: "Action Tax Refund | Professional Tax Services in Yuba City, CA",
@@ -31,26 +32,31 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-KTF9P59N');
-          `}
-        </Script>
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                  page_path: window.location.pathname,
+                });
+              `}
+            </Script>
+          </>
+        )}
       </head>
       <body className="antialiased min-h-screen flex flex-col touch-manipulation">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KTF9P59N"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
-        <GTMTracker />
+        {process.env.NODE_ENV === 'production' && (
+          <Suspense fallback={null}>
+            <GA4Tracker />
+          </Suspense>
+        )}
         <Header />
         <main className="flex-1">
           {children}
