@@ -1,10 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Suspense } from "react";
-import GA4Tracker, { GA_MEASUREMENT_ID } from "@/components/GA4Tracker";
+import GA4Tracker from "@/components/GA4Tracker";
 
 export const metadata: Metadata = {
   title: "Action Tax Refund | Professional Tax Services in Yuba City, CA",
@@ -32,24 +31,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${GA_MEASUREMENT_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `}
-            </Script>
-          </>
-        )}
       </head>
       <body className="antialiased min-h-screen flex flex-col touch-manipulation">
         {process.env.NODE_ENV === 'production' && (

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 declare global {
@@ -10,23 +11,25 @@ declare global {
   }
 }
 
-export const GA_MEASUREMENT_ID = 'G-FX1D385BEK';
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 export default function GA4Tracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname && typeof window !== 'undefined' && window.gtag) {
-      let url = pathname;
-      if (searchParams && searchParams.toString()) {
-        url += `?${searchParams.toString()}`;
-      }
-      
-      window.gtag('config', GA_MEASUREMENT_ID, {
-        page_path: url,
-      });
+    if (!GA_MEASUREMENT_ID || !pathname || typeof window === 'undefined' || !window.gtag) {
+      return;
     }
+
+    let url = pathname;
+    if (searchParams && searchParams.toString()) {
+      url += `?${searchParams.toString()}`;
+    }
+
+    window.gtag('config', GA_MEASUREMENT_ID, {
+      page_path: url,
+    });
   }, [pathname, searchParams]);
 
   useEffect(() => {
@@ -60,5 +63,27 @@ export default function GA4Tracker() {
     };
   }, []);
 
-  return null;
+  if (!GA_MEASUREMENT_ID) {
+    return null;
+  }
+
+  return (
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            page_path: window.location.pathname + window.location.search,
+          });
+        `}
+      </Script>
+    </>
+  );
 }
